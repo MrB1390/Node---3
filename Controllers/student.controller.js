@@ -54,7 +54,7 @@ export const getStudentAssignedMentor = async(req,res) =>{
        const student = await Student.findById(id).populate('mentId');
        res.status(200).json({
            message:"Fetched Succesfully",
-           Mentor: student.mentId.name
+           Mentor: student.mentId
        })
     } catch (error) {
         console.log(error);
